@@ -1,7 +1,7 @@
-# atlassian's challenge
-Solutions for atlassian's FE coding challenge
+# FE challenges
+Solutions for some of FE coding challenge
 
-### 1. Find a list (30)
+### 1. Find a list
 Implement an `indexOf` like function for lists
 
 ```javascript
@@ -72,7 +72,7 @@ list2 = List(3,2);
 console.log(find(list1,list2)); // 4
 ```
 
-### 2. Look And Say (40)
+### 2. Look And Say
 Implement a function that reads off the digits of the input:
 
 `LookAndSay(1)  = 11`   because it reads off 'one 1'
@@ -116,7 +116,7 @@ console.log(LookAndSay(111221)) // 312211
 console.log(LookAndSay(11, 2)) // 21 => 1211
 ```
 
-### 3. Base Atlassian (50)
+### 3. Base Atlassian
 Implement a function that converts an integer to base 7 and returns encoded string:
 
 ```javascript
