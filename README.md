@@ -1,5 +1,5 @@
 # FE challenges
-Solutions for some of FE coding challenge
+Solutions for some of FE coding challenges
 
 ### 1. Find a list
 Implement an `indexOf` like function for lists
@@ -137,4 +137,18 @@ console.log(convert(7)) // a0
 
 // Sample Input 2
 console.log(convert(7792875)) // atlassian
+```
+
+### 4. Base64 Encoding
+
+Extend the String object with methods that convert the value of the String to and from Base64 using the ASCII character set.
+
+Solution in [base64-encoding.js](https://github.com/mshushakov/FE-challenges/blob/master/base64-encoding.js)
+
+```javascript
+// should return 'dGhpcyBpcyBhIHN0cmluZw=='
+'this is a string'.toBase64(); 
+
+// should return 'this is a string'
+'dGhpcyBpcyBhIHN0cmluZw=='.fromBase64();
 ```
