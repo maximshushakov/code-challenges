@@ -1,5 +1,5 @@
-# FE challenges
-Solutions for some of FE coding challenges
+# Code challenges
+Solutions for some of coding challenges
 
 ### 1. Find a list
 Implement an `indexOf` like function for lists
