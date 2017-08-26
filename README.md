@@ -61,6 +61,7 @@ console.log(LookAndSay(11, 2)) // 21 => 1211
 
 ### 2. Base Atlassian
 Implement a function that converts an integer to base 7 and returns encoded string based on next codes:
+
 ['0', 'a', 't', 'l', 's', 'i', 'n']
 
 Solution in [base-atlassian.js](https://github.com/mshushakov/FE-challenges/blob/master/base-atlassian.js)
@@ -71,6 +72,9 @@ convert(7)
 
 // should return atlassian
 convert(7792875)
+
+// should return sansalita
+convert(24659559)
 ```
 
 ### 1. Find in a list
