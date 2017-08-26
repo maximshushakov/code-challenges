@@ -18,50 +18,32 @@ Solution in [base64-encoding.js](https://github.com/mshushakov/FE-challenges/blo
 ### 3. Look And Say
 Implement a function that reads off the digits of the input:
 
-`LookAndSay(1)  = 11`   because it reads off 'one 1'
+`lookAndSay(1)  = 11`   because it reads off 'one 1'
 
-`LookAndSay(11) = 21`   because it reads off 'two 1'
+`lookAndSay(11) = 21`   because it reads off 'two 1'
 
-`LookAndSay(21) = 1211` because it reads off 'one 2, one 1'
+`lookAndSay(21) = 1211` because it reads off 'one 2, one 1'
 
-`LookAndSay(digits, n)` n times recursion of `LookAndSay`
+`lookAndSay(digits, n)` n times recursion of `lookAndSay`
+
+Solution in [look-say.js](https://github.com/mshushakov/FE-challenges/blob/master/look-say.js)
 
 ```javascript
-function LookAndSay(digits, counts = 1) {
-  digits = String(digits);
-  
-  let result = "", counter = 1, previous = digits[0];
-  
-  for (let i = 1; i < digits.length; i++) {
-    if (digits[i] === previous) {
-      counter++;
-      continue;
-    } 
-    
-    result += (counter + previous);
-    
-    previous = digits[i];
-    counter = 1;
-  }
-  
-  result += (counter + previous);
-  
-  return (counts > 1) ? LookAndSay(result, --counts) : result;
-}
+// should return 111221
+lookAndSay(1211)
 
-// Sample Input 1
-console.log(LookAndSay(1211)) // 111221
+// should return 312211
+lookAndSay(111221)
 
-// Sample Input 2
-console.log(LookAndSay(111221)) // 312211
+// should return 1211 because 21 => 1211
+lookAndSay(11, 2)
 
-// Sample Input 3
-console.log(LookAndSay(11, 2)) // 21 => 1211
+// should return 22 because 22 => always 22
+lookAndSay(22, 100)
 ```
 
 ### 2. Base Atlassian
-Implement a function that converts an integer to base 7 and returns encoded string based on next codes:
-
+Implement a function that converts an integer to base 7 and returns encoded string based on next codes:  
 ['0', 'a', 't', 'l', 's', 'i', 'n']
 
 Solution in [base-atlassian.js](https://github.com/mshushakov/FE-challenges/blob/master/base-atlassian.js)
