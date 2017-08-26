@@ -1,12 +1,11 @@
 function Node(value, next) {
-  this.value = value;
-  this.next = next;
+  return { value, next }
 }
 
 function List(...items) {
-  let head = new Node(items[0], null)
+  let head = Node(items[0], null)
   for (let i = 1, node = head; i < items.length; i++) {
-    node.next = new Node(items[i], null);
+    node.next = Node(items[i], null);
     node = node.next;
   }
   return head;
@@ -46,4 +45,4 @@ function find(a,b) {
   return index;
 }
 
-module.exports = { Node, List, find }
+module.exports = { List, find }

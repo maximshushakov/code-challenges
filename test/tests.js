@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { Node, List, find } = require('../list-find.js');
+const { List, find } = require('../list-find.js');
 
 describe('Find in a list', function() {
   describe('#find', function() {
