@@ -6,7 +6,18 @@ Solutions for some coding challenges
 Implement k-means clustering algorithm.  
 This implementation was used for solving [Decode the Morse code Kata](https://www.codewars.com/kata/5270f22f862516c686000161)
 
+`kmeans(data, centroids, iterations, filter)` where  
+`data` - an array of non-clustered values   
+`centroids` - centroids for the first iteration  
+`iterations` - max number of iterations  
+`filter` - a function what invokes each iteration for more specific clastering
+
 Solution in [k-means.js](https://github.com/mshushakov/FE-challenges/blob/master/k-means.js)
+
+```javascript
+// should return 3 clusters: [[0,1,2,3,4,5],[10,11,12,13],[20,21,22,23]]
+kmeans([0,1,2,3,4,5,10,11,12,13,20,21,22,23], [1,2,3]).clusters
+```
 
 ### 4. Base64 Encoding
 
