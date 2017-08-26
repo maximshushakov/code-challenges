@@ -21,10 +21,10 @@ function kmeans(data, centroids, iterations = Number.MAX_VALUE, filter = null) {
   
   do {
     clusters = classify(data, centroids, filter);
-    for (let i = 0, m; i < clusters.length; i++) {
-      cluster_mean = mean(clusters[i]);
-      if (centroids[i] !== cluster_mean) {
-        centroids[i] = cluster_mean;
+    for (let cluster_index = 0, cluster_mean; cluster_index < clusters.length; cluster_index++) {
+      cluster_mean = mean(clusters[cluster_index]);
+      if (centroids[cluster_index] !== cluster_mean) {
+        centroids[cluster_index] = cluster_mean;
         moved = true;
         continue;
       }
@@ -33,7 +33,7 @@ function kmeans(data, centroids, iterations = Number.MAX_VALUE, filter = null) {
   }
   while (iterations-- && moved)
 
-  return { clusters: clusters, centroids: centroids }
+  return { clusters, centroids }
 }
 
 module.exports = { classify, mean, kmeans }
