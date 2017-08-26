@@ -3,8 +3,8 @@ Solutions for some coding challenges
 
 ### 4. Base64 Encoding
 
-Extend the String object with methods that convert the value of the String to and from Base64 using the ASCII character set.  
-Solution in [Codewars Kata](https://www.codewars.com/kata/5270f22f862516c686000161)
+Extend the String object with methods that convert the value of the String to and from Base64 using the ASCII character set. 
+[Codewars Kata](https://www.codewars.com/kata/5270f22f862516c686000161)
 
 Solution in [base64-encoding.js](https://github.com/mshushakov/FE-challenges/blob/master/base64-encoding.js)
 
