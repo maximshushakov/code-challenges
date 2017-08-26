@@ -1,6 +1,13 @@
 # Code challenges
 Solutions for some coding challenges
 
+### 5. K-means
+
+Implement k-means clustering algorithm.  
+This implementation was used for solving [Decode the Morse code Kata](https://www.codewars.com/kata/5270f22f862516c686000161)
+
+Solution in [k-means.js](https://github.com/mshushakov/FE-challenges/blob/master/k-means.js)
+
 ### 4. Base64 Encoding
 
 Extend the String object with methods that convert the value of the String to and from Base64 using the ASCII character set. 
