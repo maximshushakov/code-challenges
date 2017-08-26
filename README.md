@@ -15,30 +15,7 @@ Solution in [base64-encoding.js](https://github.com/mshushakov/FE-challenges/blo
 'dGhpcyBpcyBhIHN0cmluZw=='.fromBase64();
 ```
 
-### 3. Base Atlassian
-Implement a function that converts an integer to base 7 and returns encoded string:
-
-```javascript
-function convert(input) {
-  let output = [];
-  let codes = ['0', 'a', 't', 'l', 's', 'i', 'n'];
-  
-  while (input > 0) {
-    output.push(codes[input % 7]);
-    input = parseInt(input / 7)
-  }
-  
-  return output.reverse().join('');
-}
-
-// Sample Input 1
-console.log(convert(7)) // a0
-
-// Sample Input 2
-console.log(convert(7792875)) // atlassian
-```
-
-### 2. Look And Say
+### 3. Look And Say
 Implement a function that reads off the digits of the input:
 
 `LookAndSay(1)  = 11`   because it reads off 'one 1'
@@ -82,8 +59,22 @@ console.log(LookAndSay(111221)) // 312211
 console.log(LookAndSay(11, 2)) // 21 => 1211
 ```
 
+### 2. Base Atlassian
+Implement a function that converts an integer to base 7 and returns encoded string based on next codes:
+['0', 'a', 't', 'l', 's', 'i', 'n']
+
+Solution in [base-atlassian.js](https://github.com/mshushakov/FE-challenges/blob/master/base-atlassian.js)
+
+```javascript
+// should return a0
+convert(7)
+
+// should return atlassian
+convert(7792875)
+```
+
 ### 1. Find in a list
-Implement an `indexOf` like function for lists
+Implement basic List data structure and an `indexOf` like function for searching index of
 
 Solution in [list-find.js](https://github.com/mshushakov/FE-challenges/blob/master/list-find.js)
 
