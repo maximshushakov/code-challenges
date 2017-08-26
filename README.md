@@ -3,7 +3,8 @@ Solutions for some coding challenges
 
 ### 4. Base64 Encoding
 
-Extend the String object with methods that convert the value of the String to and from Base64 using the ASCII character set.
+Extend the String object with methods that convert the value of the String to and from Base64 using the ASCII character set.  
+Solution in [Codewars Kata](https://www.codewars.com/kata/5270f22f862516c686000161)
 
 Solution in [base64-encoding.js](https://github.com/mshushakov/FE-challenges/blob/master/base64-encoding.js)
 
@@ -26,7 +27,7 @@ Implement a function that reads off the digits of the input:
 
 `lookAndSay(digits, n)` n times recursion of `lookAndSay`
 
-Solution in [look-say.js](https://github.com/mshushakov/FE-challenges/blob/master/look-say.js)
+Solution in [look-and-say.js](https://github.com/mshushakov/FE-challenges/blob/master/look-and-say.js)
 
 ```javascript
 // should return 111221
@@ -62,7 +63,7 @@ convert(24659559)
 ### 1. Find in a list
 Implement basic List data structure and an `indexOf` like function for searching index of
 
-Solution in [list-find.js](https://github.com/mshushakov/FE-challenges/blob/master/list-find.js)
+Solution in [find-in-list.js](https://github.com/mshushakov/FE-challenges/blob/master/find-in-list.js)
 
 ```javascript
 // should return 1
