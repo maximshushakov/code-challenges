@@ -1,75 +1,41 @@
 # Code challenges
-Solutions for some of coding challenges
+Solutions for some coding challenges
 
-### 1. Find a list
-Implement an `indexOf` like function for lists
+### 4. Base64 Encoding
+
+Extend the String object with methods that convert the value of the String to and from Base64 using the ASCII character set.
+
+Solution in [base64-encoding.js](https://github.com/mshushakov/FE-challenges/blob/master/base64-encoding.js)
 
 ```javascript
-function Node(value, next) {
-  this.value = value;
-  this.next = next;
-}
+// should return 'dGhpcyBpcyBhIHN0cmluZw=='
+'this is a string'.toBase64(); 
 
-function List(...items) {
-  let head = new Node(items[0], null)
-  for (let i = 1, node = head; i < items.length; i++) {
-    node.next = new Node(items[i], null);
-    node = node.next;
-  }
-  return head;
-}
+// should return 'this is a string'
+'dGhpcyBpcyBhIHN0cmluZw=='.fromBase64();
+```
 
-function find(a,b) {
-  let cur = a;
-  let temp = b;
-  let index = -1;
-  let i = 0;
+### 3. Base Atlassian
+Implement a function that converts an integer to base 7 and returns encoded string:
+
+```javascript
+function convert(input) {
+  let output = [];
+  let codes = ['0', 'a', 't', 'l', 's', 'i', 'n'];
   
-  do {
-    if (cur.value === temp.value) {
-      let temp1 = cur.next, temp2 = temp.next;
-      let match = true;
-      
-      while(temp2) {
-        if (!temp1 || temp1.value !== temp2.value) {
-          match = false;
-          break;
-        }
-        temp1 = temp1.next;
-        temp2 = temp2.next;
-      }
-      
-      if (match) {
-        index = i;
-        break;
-      }
-    }
-    
-    cur = cur.next;
-    i++;
+  while (input > 0) {
+    output.push(codes[input % 7]);
+    input = parseInt(input / 7)
   }
-  while (cur);
-    
-  return index;
+  
+  return output.reverse().join('');
 }
 
 // Sample Input 1
-var list1 = List(1,2,2,3);
-var list2 = List(2,3);
-
-console.log(find(list1,list2)); // 1
+console.log(convert(7)) // a0
 
 // Sample Input 2
-list1 = List(1,2,3);
-list2 = List(3,2);
-
-console.log(find(list1,list2)); // -1
-
-// Sample Input 3
-list1 = List(1,2,3,1,3,2);
-list2 = List(3,2);
-
-console.log(find(list1,list2)); // 4
+console.log(convert(7792875)) // atlassian
 ```
 
 ### 2. Look And Say
@@ -116,39 +82,18 @@ console.log(LookAndSay(111221)) // 312211
 console.log(LookAndSay(11, 2)) // 21 => 1211
 ```
 
-### 3. Base Atlassian
-Implement a function that converts an integer to base 7 and returns encoded string:
+### 1. Find in a list
+Implement an `indexOf` like function for lists
+
+Solution in [list-find.js](https://github.com/mshushakov/FE-challenges/blob/master/list-find.js)
 
 ```javascript
-function convert(input) {
-  let output = [];
-  let codes = ['0', 'a', 't', 'l', 's', 'i', 'n'];
-  
-  while (input > 0) {
-    output.push(codes[input % 7]);
-    input = parseInt(input / 7)
-  }
-  
-  return output.reverse().join('');
-}
+// should return 1
+find(List(1,2,3), List(2,3))
 
-// Sample Input 1
-console.log(convert(7)) // a0
+// should return -1
+find(List(1,2,3), List(3,2))
 
-// Sample Input 2
-console.log(convert(7792875)) // atlassian
-```
-
-### 4. Base64 Encoding
-
-Extend the String object with methods that convert the value of the String to and from Base64 using the ASCII character set.
-
-Solution in [base64-encoding.js](https://github.com/mshushakov/FE-challenges/blob/master/base64-encoding.js)
-
-```javascript
-// should return 'dGhpcyBpcyBhIHN0cmluZw=='
-'this is a string'.toBase64(); 
-
-// should return 'this is a string'
-'dGhpcyBpcyBhIHN0cmluZw=='.fromBase64();
+// should return 4
+find(List(1,2,3,1,3,2), List(3,2))
 ```
