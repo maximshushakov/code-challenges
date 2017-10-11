@@ -3,6 +3,7 @@ const { List, find } = require('../find-in-list.js');
 const { convert } = require('../base-atlassian.js');
 const { lookAndSay } = require('../look-and-say.js');
 const { classify, mean, kmeans } = require('../k-means.js');
+const { brainfuck } = require('../brainf**k.js');
 require('../base64-encoding.js');
 
 describe('Find in a list', function() {
@@ -65,6 +66,7 @@ describe('Base64 Encoding', function() {
       assert.equal('this is a string'.toBase64(), 'dGhpcyBpcyBhIHN0cmluZw==');
     });
   });
+
   describe('#fromBase64', function() {
     it('should return `f` for `Zg==`', function() {
       assert.equal('Zg=='.fromBase64(), 'f');
@@ -93,6 +95,7 @@ describe('K-means', function() {
       assert.equal(mean([]), null);
     });
   });
+
   describe('#classify', function() {
     it('should return [1,1],[3],[] for 1,3,1 and centroids 1,2,5', function() {
       assert.deepEqual(classify([1,3,1], [1,2,5]), [[1,1],[3],[]]);
@@ -104,6 +107,7 @@ describe('K-means', function() {
       assert.deepEqual(classify([], [0,0]), [[],[]]);
     });
   });
+
   describe('#kmeans', function() {
     it('should create 3 clusters per 10 items in each cluster from groups: (0-9, 100-999, 1000-9999)', function() {
       let data = [], clusters = [];
@@ -116,5 +120,18 @@ describe('K-means', function() {
     it('should create 3 clusters (0-5, 10-13, 20-23) from 0,1,2,3,4,5,10,11,12,13,20,21,22,23', function() {
       assert.deepEqual(kmeans([0,1,2,3,4,5,10,11,12,13,20,21,22,23], [1,2,3]).clusters, [[0,1,2,3,4,5],[10,11,12,13],[20,21,22,23]])
     });
+  });
+})
+
+
+describe('Brainf**k', function() {
+  describe('#brainfuck', function() {
+    it('should return "Hello World!', function() {
+      const code = '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.';
+      assert.equal(brainfuck(code), 'Hello World!');
+    });
+    it('should return CharCode(72) (multiply 8 and 9)', function() {
+      assert.equal(brainfuck(',>,<[>[->+>+<<]>>[-<<+>>]<<<-]>>.', String.fromCharCode(8,9)), String.fromCharCode(72));
+    })
   });
 })
