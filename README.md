@@ -1,6 +1,22 @@
 # Code challenges
 Solutions for some coding challenges
 
+### 6. A smallest code interpreter (aka Brainf\*\*k)
+
+Create an interpreter of  esoteric programming language (Brainf\*\*k) that consists of only eight simple commands and an instruction pointer.
+[Codewars Kata](http://www.codewars.com/kata/526156943dfe7ce06200063e)
+
+Solution in [brainf\*\*k.js](https://github.com/mshushakov/code-challenges/blob/master/brainf**k.js)
+
+```javascript
+// should return "Hello World!"
+brainfuck('++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.');
+
+// should multiply 8 and 9 and return char code for 72
+brainfuck(',>,<[>[->+>+<<]>>[-<<+>>]<<<-]>>.', String.fromCharCode(8,9));
+```
+
+
 ### 5. K-means
 
 Implement k-means clustering algorithm.  
