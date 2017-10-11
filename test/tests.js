@@ -126,7 +126,7 @@ describe('K-means', function() {
 
 describe('Brainf**k', function() {
   describe('#brainfuck', function() {
-    it('should return "Hello World!', function() {
+    it('should return "Hello World!"', function() {
       const code = '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.';
       assert.equal(brainfuck(code), 'Hello World!');
     });
