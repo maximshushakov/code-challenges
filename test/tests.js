@@ -4,6 +4,7 @@ const { convert } = require('../base-atlassian.js');
 const { lookAndSay } = require('../look-and-say.js');
 const { classify, mean, kmeans } = require('../k-means.js');
 const { brainfuck } = require('../brainf**k.js');
+const { GeneticAlgorithm } = require('../genetic-algorithm.js');
 require('../base64-encoding.js');
 
 describe('Find in a list', function() {
@@ -123,7 +124,6 @@ describe('K-means', function() {
   });
 })
 
-
 describe('Brainf**k', function() {
   describe('#brainfuck', function() {
     it('should return "Hello World!"', function() {
@@ -133,5 +133,30 @@ describe('Brainf**k', function() {
     it('should return CharCode(72) (multiply 8 and 9)', function() {
       assert.equal(brainfuck(',>,<[>[->+>+<<]>>[-<<+>>]<<<-]>>.', String.fromCharCode(8,9)), String.fromCharCode(72));
     })
+  });
+})
+
+describe('Genetic Algorithm', function() {
+  describe('#GeneticAlgorithm:run', function() {
+    const fitness = (original) => {
+      return (chromosome) => {
+        chromosome = chromosome.split('');
+        let sum = 0;
+        chromosome.forEach((bit, index) => {
+          if (bit === original[index]) sum++
+        });
+        return sum / original.length;
+      }
+    }
+
+    it('should return "101010101010101"', function() {
+      assert.equal(new GeneticAlgorithm().run(fitness('101010101010101'), 15, .6, .002), '101010101010101');
+    });
+
+    it('should return random 24 bit string', function() {
+      const ga = new GeneticAlgorithm();
+      const random = ga.generate(24);
+      assert.equal(ga.run(fitness(random), 24, .6, .002, 200), random);
+    });
   });
 })
