@@ -1,6 +1,20 @@
 # Code challenges
 Solutions for some coding challenges
 
+### 7. Binary Genetic Algorithms
+
+Create GeneticAlgorithm class for a finding random binary string of 35 (or more) digits with a preloaded fitness function.  
+[Codewars Kata](http://www.codewars.com/kata/526f35b9c103314662000007)
+
+Solution in [genetic-algorithm.js](https://github.com/mshushakov/code-challenges/blob/master/genetic-algorithm.js)
+
+```javascript
+// should return "101010101010101"
+new GeneticAlgorithm().run(fitness('101010101010101'), 15, .6, .002)
+```
+
+
+
 ### 6. My smallest code interpreter (aka Brainf\*\*k)
 
 Create an interpreter of  esoteric programming language (Brainf\*\*k) that consists of only eight simple commands and an instruction pointer.
