@@ -3,7 +3,7 @@ const { List, find } = require('../find-in-list.js');
 const { convert } = require('../base-atlassian.js');
 const { lookAndSay } = require('../look-and-say.js');
 const { classify, mean, kmeans } = require('../k-means.js');
-const { brainfuck } = require('../brainf**k.js');
+const { brainfk } = require('../brainf**k.js');
 const { GeneticAlgorithm } = require('../genetic-algorithm.js');
 require('../base64-encoding.js');
 
@@ -37,17 +37,29 @@ describe('Base Atlassian', function() {
 
 describe('Look And Say', function() {
   describe('#lookAndSay', function() {
+    it('should return null for empty', function() {
+      assert.equal(lookAndSay(), null);
+    });
     it('should return `111221` for 1211', function() {
       assert.equal(lookAndSay(1211), '111221');
     });
     it('should return `312211` for 111221', function() {
       assert.equal(lookAndSay(111221), '312211');
     });
+    it('should return null for n=0', function() {
+      assert.equal(lookAndSay('22', 0), null);
+    });
     it('should return `1211` for 11, n=2', function() {
+      assert.equal(lookAndSay(11, 2), '1211');
+    });
+    it('should return `1` for 1211, n=3', function() {
       assert.equal(lookAndSay(11, 2), '1211');
     });
     it('should return `22` for 22, n=100', function() {
       assert.equal(lookAndSay(22, 100), '22');
+    });
+    it('should return `22` for 22, n=10000000', function() {
+      assert.equal(lookAndSay(22, 10000000), '22');
     });
   });
 })
@@ -125,13 +137,13 @@ describe('K-means', function() {
 })
 
 describe('Brainf**k', function() {
-  describe('#brainfuck', function() {
+  describe('#brainfk', function() {
     it('should return "Hello World!"', function() {
       const code = '++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.';
-      assert.equal(brainfuck(code), 'Hello World!');
+      assert.equal(brainfk(code), 'Hello World!');
     });
     it('should return CharCode(72) (multiply 8 and 9)', function() {
-      assert.equal(brainfuck(',>,<[>[->+>+<<]>>[-<<+>>]<<<-]>>.', String.fromCharCode(8,9)), String.fromCharCode(72));
+      assert.equal(brainfk(',>,<[>[->+>+<<]>>[-<<+>>]<<<-]>>.', String.fromCharCode(8,9)), String.fromCharCode(72));
     })
   });
 })
