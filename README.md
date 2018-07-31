@@ -89,6 +89,9 @@ lookAndSay(11, 2)
 
 // should return 22 because 22 => always 22
 lookAndSay(22, 100)
+
+// should return 22, performance test
+lookAndSay(22, 10000000)
 ```
 
 ### 2. Base Atlassian
