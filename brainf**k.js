@@ -1,4 +1,4 @@
-function brainfuck(code, input){
+function brainfk(code, input){
   const data = (input) ? input.split('').map(char => char.charCodeAt(0)) : [];
   const stack = [];
   const memory = [];
@@ -39,4 +39,4 @@ function brainfuck(code, input){
   return output;
 }
 
-module.exports = { brainfuck }
+module.exports = { brainfk }

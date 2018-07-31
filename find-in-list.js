@@ -1,13 +1,10 @@
-function Node(value, next) {
-  return { value, next }
-}
 
-function List(...items) {
-  let head = Node(items[0], null)
-  for (let i = 1, node = head; i < items.length; i++) {
-    node.next = Node(items[i], null);
-    node = node.next;
-  }
+function List(first, ...rest) {
+  const head = { value: first };
+  
+  rest.reduce((node, value) => 
+    node.next = { value }, head);
+    
   return head;
 }
 
