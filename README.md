@@ -24,10 +24,10 @@ Solution in [brainf\*\*k.js](https://github.com/mshushakov/code-challenges/blob/
 
 ```javascript
 // should return "Hello World!"
-brainfuck('++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.');
+brainfk('++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.');
 
 // should multiply 8 and 9 and return char code for 72
-brainfuck(',>,<[>[->+>+<<]>>[-<<+>>]<<<-]>>.', String.fromCharCode(8,9));
+brainfk(',>,<[>[->+>+<<]>>[-<<+>>]<<<-]>>.', String.fromCharCode(8,9));
 ```
 
 
