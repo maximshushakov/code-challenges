@@ -1,6 +1,8 @@
 # Code challenges
 Solutions for some coding challenges
 
+[![](https://www.codewars.com/users/mshushakov/badges/small)](https://www.codewars.com/users/mshushakov)
+
 ### 7. Binary Genetic Algorithms
 
 Create GeneticAlgorithm class for a finding random binary string of 35 (or more) digits with a preloaded fitness function.  
