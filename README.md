@@ -1,5 +1,5 @@
 # Code challenges
-Solutions for some coding challenges
+Solutions for some coding challenges on [Codewars](https://www.codewars.com/)
 
 [![](https://www.codewars.com/users/mshushakov/badges/small)](https://www.codewars.com/users/mshushakov)
 
