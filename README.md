@@ -1,5 +1,7 @@
 # Code challenges
-Solutions for some coding challenges
+Solutions for some coding challenges on [Codewars](https://www.codewars.com/)
+
+[![](https://www.codewars.com/users/mshushakov/badges/small)](https://www.codewars.com/users/mshushakov)
 
 ### 7. Binary Genetic Algorithms
 
@@ -17,7 +19,7 @@ new GeneticAlgorithm().run(fitness('101010101010101'), 15, .6, .002)
 
 ### 6. My smallest code interpreter (aka Brainf\*\*k)
 
-Create an interpreter of  esoteric programming language (Brainf\*\*k) that consists of only eight simple commands and an instruction pointer.
+Create an interpreter of esoteric programming language (Brainf\*\*k). [It has eight simple commands and an instruction pointer].
 [Codewars Kata](http://www.codewars.com/kata/526156943dfe7ce06200063e)
 
 Solution in [brainf\*\*k.js](https://github.com/mshushakov/code-challenges/blob/master/brainf**k.js)
@@ -26,7 +28,7 @@ Solution in [brainf\*\*k.js](https://github.com/mshushakov/code-challenges/blob/
 // should return "Hello World!"
 brainfk('++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.');
 
-// should multiply 8 and 9 and return char code for 72
+// should multiply 8 by 9 and return char code for the result
 brainfk(',>,<[>[->+>+<<]>>[-<<+>>]<<<-]>>.', String.fromCharCode(8,9));
 ```
 
