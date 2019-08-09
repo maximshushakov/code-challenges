@@ -3,6 +3,31 @@ Solutions for some coding challenges on [Codewars](https://www.codewars.com/)
 
 [![](https://www.codewars.com/users/mshushakov/badges/small)](https://www.codewars.com/users/mshushakov)
 
+### 8. Sudoku Solver
+
+Write a function that will solve a 9x9 Sudoku puzzle. The function will take one argument consisting of the 2D puzzle array, with the value 0 representing an unknown square.
+[Codewars Kata](https://www.codewars.com/kata/5296bc77afba8baa690002d7)
+
+Solution in [sudoku-solver.js](https://github.com/mshushakov/code-challenges/blob/master/sudoku-solver.js)
+
+```javascript
+const puzzle = [
+  [5,3,0,0,7,0,0,0,0],
+  [6,0,0,1,9,5,0,0,0],
+  [0,9,8,0,0,0,0,6,0],
+  [8,0,0,0,6,0,0,0,3],
+  [4,0,0,8,0,3,0,0,1],
+  [7,0,0,0,2,0,0,0,6],
+  [0,6,0,0,0,0,2,8,0],
+  [0,0,0,4,1,9,0,0,5],
+  [0,0,0,0,8,0,0,7,9]
+];
+
+// should solve sudoku puzzle
+Sudoku.solve(puzzle)
+```
+
+
 ### 7. Binary Genetic Algorithms
 
 Create GeneticAlgorithm class for a finding random binary string of 35 (or more) digits with a preloaded fitness function.  
@@ -14,7 +39,6 @@ Solution in [genetic-algorithm.js](https://github.com/mshushakov/code-challenges
 // should return "101010101010101"
 new GeneticAlgorithm().run(fitness('101010101010101'), 15, .6, .002)
 ```
-
 
 
 ### 6. My smallest code interpreter (aka Brainf\*\*k)
